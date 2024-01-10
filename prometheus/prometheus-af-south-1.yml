@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'Capetown servers'
+    ec2_sd_configs:
+      - region: 'af-south-1'
+    static_configs:
+      - targets: ['monitoring.noble-mutuwa.com:9100']
